@@ -1,32 +1,83 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+//Declaração das funções
+void funcaotorre ();
+void funcaobispo ();
+void funcaorainha ();
 
 int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
-
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
-
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
-
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
-
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+    //Chamando as funções
+    funcaotorre ();
+    funcaobispo ();
+    funcaorainha ();
 
     return 0;
+}
+
+//Função de repetição referente ao movimento da torre
+void funcaotorre (){
+
+    //declaração de variáveis
+    int torre, casas;
+    int totalCasas = 0;
+
+    //laço de repetição referente ao movimento da torre
+    printf("Movimento da torre:\n");
+    for (casas = 1; casas <= 5; casas++) {
+
+        printf("Direita\n");
+        totalCasas++;
+    }
+    //Declarando o numero total de casas percorridas pela torre
+    printf("O total de casas percorridas pela torre foi de %d casas para a direita.\n", totalCasas);
+}
+
+//Função de repetição referente ao movimento do bispo
+void funcaobispo (){
+
+    //declaração de variáveis
+    int bispo, casas;
+    int totalCasas = 0;
+
+    //inicializando a variável casas e totalCasas
+    casas = 1;
+    totalCasas = 0;
+    //laço de repetição referente ao movimento do bispo
+    printf("Movimento do bispo:\n");
+    do
+    {
+        printf("Cima, Direita\n");
+        casas++;
+        totalCasas++;
+
+    } while (casas <= 5);
+
+    //Declarando o numero total de casas percorridas pelo bispo
+    printf("O total de casas percorridas pelo bispo foi de %d casas na diagonal cima, direita.\n", totalCasas);
+
+}
+
+//Função de repetição referente ao movimento da rainha
+void funcaorainha (){
+
+    //declaração de variáveis
+    int rainha, casas;
+    int totalCasas = 0;
+
+    //inicializando a variável casas e totalCasas
+    casas = 1;
+    totalCasas = 0;
+
+    //laço de repetição referente ao movimento da rainha
+    printf("Movimento da rainha:\n");
+    while (casas <= 8)
+    {
+        printf("Esquerda\n");
+        casas++;
+        totalCasas++;
+    }
+    //Declarando o numero total de casas percorridas pela rainha
+    printf("O total de casas percorridas pela rainha foi de %d casas para a esquerda.\n", totalCasas);
+
 }
